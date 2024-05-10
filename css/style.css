@@ -1,27 +1,91 @@
 :root {
     /* Colores primarios */
-    --color-primary: #3498db;  
-    --color-secondary: #2ecc71; 
+    --color-primary: ;  
+    --color-secondary: ; 
     
     /* Colores de fondo */
-    --color-background-light: #f5f5f5; 
-    --color-background-dark: #2c3e50;  
+    --color-background-light: ; 
+    --color-background-dark: ;  
     
     /* Colores de texto */
-    --color-text-primary: #333333;  
-    --color-text-secondary: #7f8c8d;
+    --color-text-primary: #ffffff;  
+    --color-text-secondary: #fbff00;
     
     /* Otros colores */
-    --color-warning: #e67e22;  
-    --color-error: #e74c3c;   
-    --color-success: #2ecc71;
+    --color-warning: ;  
+    --color-error: ;   
+    --color-success: ;
 }
 
 
+
+/* ajuste general de la web */
 
 * {
     margin: 0;  
     padding: 0;  
     box-sizing: border-box;  
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
+
+
+/* modificacion en el body */
+
+body {
+    width: 100%;
+    min-height: 100vh; 
+}
+
+
+/* barra de navegacion */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 80px; 
+    background-color: #000000;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+}
+
+
+
+/* Estilos para el logo dentro del navbar */
+
+.container__logo {
+    flex: 0 0 auto;
+}
+
+.container__logo img {
+    max-height: 60px;
+}
+
+
+/* Estilos para el menú del navbar */
+
+.navbar-menu {
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar-menu li {
+    margin-left: 40px;
+}
+
+
+.navbar-menu a {
+    text-decoration: none;
+    color: white; 
+    font-size: 15px; 
+    font-weight: bold;
+}
+
+.navbar-menu a:hover {
+    color: #ecfd00;
+    transition: all 0.5s ease; 
 }
