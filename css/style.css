@@ -552,3 +552,61 @@ button:hover {
 }
 
 
+
+
+
+
+/* Estilos para el contenedor footer*/
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: left;
+}
+
+
+
+.contenedor__footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.titulo__footer {
+    padding-bottom: 10px;
+}
+
+
+.contenedor__contact i {
+    cursor: pointer;
+}
+
+
+
+.telefono, .email {
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+
+
+.telefono:hover, .email:hover {
+    color: rgb(36, 20, 182);
+    transition: all 0.5s ease;
+}
+
+
+
+.texto-email {
+    margin-top: 10px;
+}
+
+
+
+
+
+
