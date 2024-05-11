@@ -607,6 +607,40 @@ button:hover {
 
 
 
+/* Estilos para el icono de WhatsApp */
+
+
+#whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00ff5e;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 0.5s ease;
+}
+
+
+
+#whatsapp-icon i {
+    font-size: 40px;
+}
+
+
+#whatsapp-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.788); 
+    transition: all 0.5s ease;
+    background-color: #0e7935;
+}
+
 
 
 
