@@ -99,7 +99,7 @@ body {
     color: white; 
     font-size: 15px; 
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 
@@ -172,7 +172,7 @@ h1 {
 
 .imagen img {
     max-width: 100%;
-    width: 60%;
+    width: 80%;
     height: auto;
     filter: drop-shadow(0px 40px 8px rgba(0, 0, 0, 0.6));
     cursor: pointer;
@@ -196,7 +196,7 @@ h1 {
 .categorias {
     padding: 2em; 
     background: linear-gradient(to bottom, #000000, #1a1a1a);
-    height: 100vh;
+    height: 130vh;
 }
 
 
@@ -249,12 +249,30 @@ h1 {
 
 
 .titulo__card {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+.icono__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.icono__contenedor i {
+    font-size: 6em; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    color: white;
 }
 
 
@@ -265,15 +283,16 @@ h1 {
 }
 
 
+
 /* Estilos para el contenedor seccion 3*/
 
 
 
 
 .productos {
-    position: relative; /* Establece una posición relativa para el contenedor */
+    position: relative;
     padding: 2em; 
-    height: 200vh;
+    height: 210vh;
     background: linear-gradient(to bottom, #000000, #1a1a1a);
 }
 
@@ -316,7 +335,7 @@ h1 {
 
 .grid__productos {
     display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 270px)); 
+    grid-template-columns: repeat(3, minmax(100px, 290px)); 
     gap: 5em;
     justify-content: center;
 }
@@ -381,12 +400,12 @@ h1 {
 .boton__producto {
     margin-top: 15px;
     cursor: pointer;
-    padding: 5px;
+    padding: 7px;
     background-color: rgb(0, 0, 0);
     border: none;
     min-width: 120px;
     transition: all 0.5s ease;
-    border-radius: 5px;
+    border-radius: 2px;
     font-weight: bold;
     color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.788); 
@@ -400,3 +419,136 @@ h1 {
     color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.788); 
 }
+
+
+
+
+/* Estilos para el contenedor seccion 4*/
+
+
+.contactos {
+    padding: 2em;
+    height: 120vh;
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.titulo__contactos {
+    text-align: center;
+    color: yellow;
+    font-size: 2rem;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    letter-spacing: 2px;
+}
+
+
+
+
+form {
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 20px; 
+    flex-direction: column; 
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.788);
+    cursor: pointer;
+    transition: all 0.5s ease; 
+}
+
+
+
+form:hover {
+    transform: translateY(-10px);
+    transition: all 0.5s ease; 
+}
+
+
+.input {
+    margin-bottom: 20px;
+}
+
+
+
+.input label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.6));
+    letter-spacing: 1.5px;
+}
+
+
+
+.input input,
+.input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #807d7d;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+
+}
+
+
+
+.input input:focus,
+.input textarea:focus {
+    outline: none;
+}
+
+
+
+.input textarea {
+    resize: vertical;
+}
+
+
+
+.input.black-bg input,
+.input.black-bg textarea {
+    background-color: #000; 
+    color: #fff; 
+}
+
+
+
+button {
+    width: 40%;
+    padding: 10px 20px;
+    background: #ad5389;
+    background: -webkit-linear-gradient(to top, #3c1053, #ad5389);  
+    background: linear-gradient(to top, #3c1053, #ad5389); 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+
+
+
+button:hover {
+    background: #4682B4;
+    transition: all 0.5s ease;
+}
+
+
