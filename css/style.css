@@ -9,8 +9,14 @@
     --color-text-primero: #ffffff;  
     --color-text-segundo: #fbff00;
     --color-text-tercero: #000000;
-}
 
+    /* fuente para titulos */
+    --fuente-primaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    /* Cfuente para textos*/
+    --fuente-secundaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
 
 
 /* ajuste general de la web */
@@ -19,7 +25,6 @@
     margin: 0;  
     padding: 0;  
     box-sizing: border-box;  
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
     scroll-behavior: smooth;
 }
 
@@ -88,7 +93,7 @@ body {
 
 
 .navbar-menu li {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 
@@ -100,6 +105,7 @@ body {
     font-size: 15px; 
     font-weight: bold;
     letter-spacing: 1px;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -119,7 +125,7 @@ body {
 .banner {
     padding-top: 80px; 
     padding: 20px;;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(/assets/img/fondo__banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -150,13 +156,13 @@ body {
 
 h1 {
     font-size: 50px;
-    font-weight: bold;
     background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
     filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.6));
     letter-spacing: 2px;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -164,8 +170,8 @@ h1 {
     font-size: 20px;
     color: #4682B4;
     line-height: 1.6;
-    font-weight: bold;
     filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.6));
+    font-family: var(--fuente-secundaria);
 }
 
 
@@ -188,7 +194,6 @@ h1 {
 }
 
 
-
 /* Estilos para el contenedor seccion 2*/
 
 
@@ -196,7 +201,7 @@ h1 {
 .categorias {
     padding: 2em; 
     background: linear-gradient(to bottom, #000000, #1a1a1a);
-    height: 130vh;
+    min-height: 130vh;
 }
 
 
@@ -208,6 +213,7 @@ h1 {
     margin-top: 3em;
     margin-bottom: 3em;
     letter-spacing: 2px;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -256,6 +262,7 @@ h1 {
     -webkit-text-fill-color: transparent;
     font-weight: bold;
     font-size: 25px;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -279,7 +286,7 @@ h1 {
 
 .subtitulo__card {
     color: white;
-    font-weight: bold;
+    font-family: var(--fuente-secundaria);
 }
 
 
@@ -292,7 +299,7 @@ h1 {
 .productos {
     position: relative;
     padding: 2em; 
-    height: 210vh;
+    min-height: 210vh;
     background: linear-gradient(to bottom, #000000, #1a1a1a);
 }
 
@@ -305,6 +312,7 @@ h1 {
     margin-top: 3em;
     margin-bottom: 3em;
     letter-spacing: 2px;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -366,7 +374,7 @@ h1 {
     padding-top: 15px;
     padding-bottom: 15px;
     color: white;
-    font-weight: bold;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -383,16 +391,16 @@ h1 {
 .descripcion__producto {
     padding-top: 15px;
     color: white;
-    font-weight: bold;
+    font-family: var(--fuente-secundaria);
 }
 
 
 
 .costo__producto {
     color: yellow;
-    font-weight: bold;
     padding-top: 15px;
     padding-bottom: 15px;
+    font-family: var(--fuente-secundaria);
 }
 
 
@@ -406,9 +414,9 @@ h1 {
     min-width: 120px;
     transition: all 0.5s ease;
     border-radius: 2px;
-    font-weight: bold;
     color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.788); 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.788);
+    font-family: var(--fuente-secundaria); 
 }
 
 
@@ -447,6 +455,7 @@ h1 {
     margin-top: 2em;
     margin-bottom: 1em;
     letter-spacing: 2px;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -487,6 +496,7 @@ form:hover {
     font-weight: bold;
     filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.6));
     letter-spacing: 1.5px;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -507,7 +517,7 @@ form:hover {
 
 .input input:focus,
 .input textarea:focus {
-    outline: none;
+    outline: outset;
 }
 
 
@@ -577,6 +587,8 @@ button:hover {
 
 .titulo__footer {
     padding-bottom: 10px;
+    font-weight: bold;
+    font-family: var(--fuente-primaria);
 }
 
 
@@ -625,12 +637,18 @@ button:hover {
     cursor: pointer;
     z-index: 9999;
     transition: all 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.788);
 }
 
 
 
 #whatsapp-icon i {
     font-size: 40px;
+}
+
+
+#whatsapp-icon a {
+        text-decoration: none;
 }
 
 
@@ -643,4 +661,115 @@ button:hover {
 
 
 
+.whatsapp[title]::after {
+    content: attr(title);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: var(--fuente-primaria);
+    text-align: center;
+}
 
+.whatsapp:hover[title]::after {
+    opacity: 1;
+}
+
+
+
+
+
+/* mediaquery responsive*/
+
+
+
+/* navbar */
+
+.hamburguesa {
+    display: none; 
+}
+
+
+/* hamburguesa */
+@media only screen and (max-width: 480px) {
+    .navbar-menu {
+        display: none;
+    }
+
+
+    .hamburguesa {
+        display: block;
+        color: white; 
+    }
+
+    .hamburguesa i {
+        font-size: 30px; 
+        cursor: pointer; 
+    }
+}
+
+
+
+
+/* Banner */
+
+@media only screen and (max-width: 480px) {
+    .contenedor {
+        flex-direction: column; 
+        align-items: center; 
+        padding-top: 50px; 
+    }
+
+    .texto {
+        padding: 20px;
+        margin-top: 50px; 
+    }
+
+    .imagen {
+        width: 100%;
+        margin-top: 20px; 
+    }
+}
+
+
+
+
+/*  categorias */
+
+@media only screen and (max-width: 480px) {
+    .grid__categorias {
+        grid-template-columns: 1fr; 
+        gap: 1em; 
+    }
+}
+
+
+
+
+/* Productos */
+
+@media only screen and (max-width: 480px) {
+    .grid__productos {
+            grid-template-columns: 1fr; 
+            gap: 1em;
+        }
+}
+
+
+
+
+/* Footer */
+
+
+@media only screen and (max-width: 480px) {
+    .info__contacto {
+        text-align: center; 
+    }
+}
