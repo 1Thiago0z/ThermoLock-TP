@@ -33,16 +33,16 @@
             <div class="hamburguesa">
                 <i class="bx bx-menu"></i>
             </div>
-
+            
             <ul class="navbar-menu">
 
-            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#inicio"><i class='bx-fw bx bxs-home'></i>Inicio</a></li>
 
-            <li><a href="#categorias">Categorias</a></li>
+            <li><a href="#categorias"><i class='bx-fw bx bx-chart'></i>Categorias</a></li>
 
-            <li><a href="#productos">Productos</a></li>
+            <li><a href="#productos"><i class='bx-fw bx bxs-purchase-tag-alt' ></i>Productos</a></li>
 
-            <li><a href="#contactos">Contactos</a></li>
+            <li><a href="#contactos"><i class='bx-fw bx bxs-phone'></i>Contáctanos</a></li>
 
             </ul>
 
@@ -55,6 +55,7 @@
 
                 <div class="texto">
                     <h1>ThermoLock</h1>
+                    <div class="linea"></div>
                     <p class="subtitulo">Experimenta la perfección en vasos térmicos, temperatura ideal siempre contigo. Disfruta tus bebidas, frías o calientes, sin fugas. Diseño elegante y tecnología avanzada hacen de nuestros vasos tus compañeros ideales. ¡Descubre la diferencia con nosotros!.</p>
                 </div>
 
@@ -76,7 +77,8 @@
 
         <section id="categorias" class="categorias">
             
-            <h2 class="titulo__categorias">Nuestras Categorías</h2>
+            <h2 class="titulo__categorias">Nuestras Categorías<div class="linea-categorias"></div></h2> 
+
             
             <div class="contenedor__categorias">
 
@@ -121,7 +123,7 @@
         
         <section id="productos" class="productos">
 
-            <h2 class="titulo__productos">Nuestros Productos</h2>
+            <h2 class="titulo__productos">Nuestros Productos<div class="linea-productos"></div></h2>
 
             <div class="contenedor__productos">
 
@@ -214,7 +216,7 @@
 
         <section id="contactos" class="contactos">
 
-            <h2 class="titulo__contactos">Contactos</h2>
+            <h2 class="titulo__contactos">Contáctanos<div class="linea-contactos"></div></h2>
 
             <form action="https://formsubmit.co/thesolotov01@gmail.com" method="POST">
 
@@ -243,7 +245,7 @@
                 </div>
 
 
-                <button>Enviar consulta <i class='bx-fw bx bx-log-in'></i></button>
+                <button>Enviar <i class='bx-fw bx bx-log-in'></i></button>
 
 
             </form>
@@ -264,7 +266,7 @@
 
             <div class="info__contacto">
 
-                <h3 class="titulo__footer">Contacto:</h3>
+                <h3 class="titulo__footer">Contactos</h3>
 
                 <p><a class="telefono" href="tel:+1123306221"><i class="bx-fw bx bx-phone"></i>+1123306221</a></p>
 
@@ -286,7 +288,18 @@
     </footer>
 
     
+    <script>
 
+        window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        });
+        
+    </script>
 </body>
 
 </html>
