@@ -58,6 +58,8 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     width: 100%;
+    padding-right: 100px;
+    padding-left:  100px;
 } 
 
 
@@ -73,7 +75,7 @@ body {
 
 
 .container__logo img {
-    max-height: 60px;
+    max-height: 70px;
 }
 
 
@@ -113,6 +115,30 @@ body {
 .navbar-menu a:hover {
     color: #ecfd00;
     transition: all 0.5s ease; 
+}
+
+
+
+.navbar-menu li:hover .bx {
+    animation: tada 2s infinite;
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 
@@ -172,6 +198,7 @@ h1 {
     line-height: 1.6;
     filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.6));
     font-family: var(--fuente-secundaria);
+    padding-top: 10px;
 }
 
 
@@ -180,7 +207,7 @@ h1 {
     max-width: 100%;
     width: 80%;
     height: auto;
-    filter: drop-shadow(0px 40px 8px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0px 15px 8px rgba(0, 0, 0, 0.6));
     cursor: pointer;
     transition: all 0.5s ease;
     min-width: 200px;
@@ -193,6 +220,24 @@ h1 {
     transition: all 0.5s ease;
 }
 
+
+
+.linea {
+    background: linear-gradient(to right, #ffffff, #d3d3d3, #808080);
+    height: 5px;
+    border-radius: 10px;
+}
+
+
+.linea-categorias, .linea-productos, .linea-contactos {
+    background: linear-gradient(to right, #ffffff, #d3d3d3, #808080);
+    height: 5px;
+    max-width: 30%;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
 
 /* Estilos para el contenedor seccion 2*/
 
@@ -354,7 +399,7 @@ h1 {
     background: #000000;  
     background: -webkit-linear-gradient(to right, #434343, #000000);
     background: linear-gradient(to right, #434343, #000000); 
-    border: 3px solid #4682B4;
+    border: 1px solid #4682B4;
     border-radius: 5px;
     transition: all 0.5s ease;
     cursor: pointer;
@@ -537,7 +582,7 @@ form:hover {
 
 
 button {
-    width: 40%;
+    width: 35%;
     padding: 10px 20px;
     background: #ad5389;
     background: -webkit-linear-gradient(to top, #3c1053, #ad5389);  
@@ -559,6 +604,7 @@ button {
 button:hover {
     background: #4682B4;
     transition: all 0.5s ease;
+    text-shadow: 1px 3px 17px rgba(0,0,0,0.6);
 }
 
 
@@ -589,6 +635,7 @@ button:hover {
     padding-bottom: 10px;
     font-weight: bold;
     font-family: var(--fuente-primaria);
+    font-size: 25px;
 }
 
 
@@ -615,6 +662,7 @@ button:hover {
 
 .texto-email {
     margin-top: 10px;
+    text-shadow: 1px 3px 17px rgba(0,0,0,0.6);
 }
 
 
@@ -645,6 +693,17 @@ button:hover {
 #whatsapp-icon i {
     font-size: 40px;
 }
+
+
+#whatsapp-icon .whatsapp i {
+    color: white;
+}
+
+
+#whatsapp-icon a {
+        text-decoration: none;
+}
+
 
 
 #whatsapp-icon a {
@@ -688,33 +747,36 @@ button:hover {
 
 /* mediaquery responsive*/
 
-
-
-/* navbar */
-
 .hamburguesa {
     display: none; 
 }
 
+/* navbar */
 
-/* hamburguesa */
 @media only screen and (max-width: 480px) {
+
+
     .navbar-menu {
         display: none;
     }
-
-
     .hamburguesa {
         display: block;
         color: white; 
     }
-
     .hamburguesa i {
-        font-size: 30px; 
+        font-size: 40px; 
         cursor: pointer; 
     }
-}
+    .show-menu {
+        display: block;
+    }
 
+    .navbar {
+        padding-left: 50px;
+        padding-right: 50px; 
+    }
+
+}
 
 
 
@@ -767,6 +829,12 @@ button:hover {
 
 /* Footer */
 
+
+@media only screen and (max-width: 880px) {
+    .info__contacto {
+    text-align: center;
+    }
+}
 
 @media only screen and (max-width: 480px) {
     .info__contacto {
