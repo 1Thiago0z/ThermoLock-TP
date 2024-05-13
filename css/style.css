@@ -768,8 +768,9 @@ button:hover {
 /* hamburguesa */
 @media only screen and (max-width: 480px) {
     .navbar {
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: black;
     }
 
     .navbar-menu {
@@ -782,6 +783,29 @@ button:hover {
     .hamburguesa i {
         font-size: 40px; 
         cursor: pointer; 
+    }
+
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 0, 0); 
+        text-align: center; 
+        padding: 20px 0; 
+        opacity: 0; 
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-menu.active {
+        display: block;
+        opacity: 1; 
+    }
+
+    .navbar-menu li {
+        margin-left: 0; 
+        margin-bottom: 10px; 
     }
 }
 

@@ -226,7 +226,7 @@
 
                     <label for="nombre"><i class='bx-fw bx bxs-user-circle' ></i>Nombre:</label>
 
-                    <input type="text"  name="nombre" required>
+                    <input type="text"  name="nombre" placeholder="Ingresa tu nombre" required>
 
                 </div>
 
@@ -234,7 +234,7 @@
 
                     <label for="correo"><i class='bx-fw bx bxs-envelope'></i>Correo:</label>
 
-                    <input type="email" name="correo" required>
+                    <input type="email" name="correo" placeholder="Ingresa tu correo electronico" required>
 
                 </div>
 
@@ -242,7 +242,7 @@
 
                     <label for="mensaje"><i class='bx-fw bx bxs-message'></i>Mensaje:</label>
 
-                    <textarea name="mensaje" required></textarea>
+                    <textarea name="mensaje" placeholder="Ingresa tu mensaje" required></textarea>
 
                 </div>
 
@@ -298,8 +298,16 @@
             navbar.classList.remove('scrolled');
         }
         });
-    </script>
 
-</body>
+        document.addEventListener('DOMContentLoaded', function () {
+        const hamburguesa = document.querySelector('.hamburguesa');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        hamburguesa.addEventListener('click', function () {
+            navbarMenu.classList.toggle('active');
+        });
+    });
+    </script>
+    </body>
 
 </html>
