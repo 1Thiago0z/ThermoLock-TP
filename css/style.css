@@ -767,6 +767,11 @@ button:hover {
 
 /* hamburguesa */
 @media only screen and (max-width: 480px) {
+    .navbar {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
     .navbar-menu {
         display: none;
     }
