@@ -57,6 +57,8 @@ body {
     top: 0;
     z-index: 1000;
     width: 100%;
+    padding-left: 100px;
+    padding-right: 100px; 
 } 
 
 .navbar.scrolled {
@@ -157,7 +159,7 @@ body {
     width: 100%;
     margin: 0 auto;
     background-size: cover; 
-    background-position: center; 
+    background-position: center;
 }
 
 
@@ -706,6 +708,10 @@ button:hover {
 
 #whatsapp-icon i {
     font-size: 40px;
+}
+
+.whatsapp i {
+    color: #ffffff; /* Cambia el color según tu preferencia */
 }
 
 
