@@ -58,6 +58,8 @@ body {
     z-index: 1000;
     width: 100%;
     transition: background-color 0.3s ease;
+    padding-right: 100px;
+    padding-left:  100px;
 } 
 
 .navbar.scrolled {
@@ -75,7 +77,7 @@ body {
 
 
 .container__logo img {
-    max-height: 60px;
+    max-height: 70px;
 }
 
 
@@ -117,6 +119,28 @@ body {
     transition: all 0.5s ease; 
 }
 
+
+.navbar-menu li:hover .bx {
+    animation: tada 2s infinite;
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
 
 
 
@@ -170,7 +194,7 @@ h1 {
 
 .linea {
     background-color: white;
-    height: 2px;
+    height: 4px;
 }
 
 
@@ -189,7 +213,7 @@ h1 {
     max-width: 100%;
     width: 80%;
     height: auto;
-    filter: drop-shadow(0px 40px 8px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0px 15px 8px rgba(0, 0, 0, 0.6));
     cursor: pointer;
     transition: all 0.5s ease;
     min-width: 200px;
@@ -228,7 +252,7 @@ h1 {
 
 .linea-categorias, .linea-productos, .linea-contactos {
     background-color: white;
-    height: 2px;
+    height: 4px;
     max-width: 30%;
     margin: 0 auto;
     margin-top: 5px;
@@ -371,7 +395,7 @@ h1 {
     background: #000000;  
     background: -webkit-linear-gradient(to right, #434343, #000000);
     background: linear-gradient(to right, #434343, #000000); 
-    border: 3px solid #4682B4;
+    border: 1px solid #4682B4;
     border-radius: 5px;
     transition: all 0.5s ease;
     cursor: pointer;
@@ -607,6 +631,8 @@ button:hover {
     padding-bottom: 10px;
     font-weight: bold;
     font-family: var(--fuente-primaria);
+    font-size: 25px;
+    text-shadow: 1px 3px 17px rgba(0,0,0,0.6);
 }
 
 
@@ -620,6 +646,7 @@ button:hover {
     color: white;
     text-decoration: none;
     transition: all 0.5s ease;
+    text-shadow: 1px 3px 17px rgba(0,0,0,0.6);
 }
 
 
@@ -633,6 +660,7 @@ button:hover {
 
 .texto-email {
     margin-top: 10px;
+    text-shadow: 1px 3px 17px rgba(0,0,0,0.6);
 }
 
 
@@ -662,6 +690,11 @@ button:hover {
 
 #whatsapp-icon i {
     font-size: 40px;
+}
+
+
+#whatsapp-icon .whatsapp i {
+    color: white;
 }
 
 
@@ -708,30 +741,38 @@ button:hover {
 
 
 
+
 /* navbar */
 
 .hamburguesa {
     display: none; 
 }
 
-
-/* hamburguesa */
 @media only screen and (max-width: 480px) {
+    
+
     .navbar-menu {
         display: none;
     }
-
-
     .hamburguesa {
         display: block;
         color: white; 
     }
-
     .hamburguesa i {
-        font-size: 30px; 
+        font-size: 40px; 
         cursor: pointer; 
     }
+    .show-menu {
+        display: block;
+    }
+    
+    .navbar {
+        padding-left: 50px;
+        padding-right: 50px; 
+    }
+
 }
+
 
 
 
@@ -820,6 +861,6 @@ button:hover {
 
 @media only screen and (max-width: 880px) {
     .info__contacto {
-        text-align: center; 
+        text-align: center;
     }
 }
