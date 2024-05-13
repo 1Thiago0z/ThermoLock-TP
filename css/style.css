@@ -51,18 +51,17 @@ body {
     justify-content: space-between;
     align-items: center; 
     padding: 0 40px; 
-    background-color: #000000;
+    border-bottom: 50px;
     height: 80px;
     position: fixed;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     width: 100%;
-    padding-right: 100px;
-    padding-left:  100px;
 } 
 
-
+.navbar.scrolled {
+    background-color: #000000;
+}
 
 /* Estilos para el logo dentro del navbar */
 
@@ -118,10 +117,10 @@ body {
 }
 
 
-
 .navbar-menu li:hover .bx {
     animation: tada 2s infinite;
 }
+
 
 @keyframes tada {
     0% {
@@ -153,11 +152,12 @@ body {
     padding: 20px;;
     min-height: 100vh;
     background-image: url(/assets/img/fondo__banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat;; 
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    background-size: cover; 
+    background-position: center; 
 }
 
 
@@ -189,6 +189,11 @@ h1 {
     filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.6));
     letter-spacing: 2px;
     font-family: var(--fuente-primaria);
+}
+
+.linea {
+    background-color: white;
+    height: 4px;
 }
 
 
@@ -262,6 +267,14 @@ h1 {
 }
 
 
+.linea-categorias, .linea-productos, .linea-contactos {
+    background-color: white;
+    height: 4px;
+    max-width: 30%;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 .contenedor__categorias {
     max-width: 1200px;
@@ -481,10 +494,11 @@ h1 {
 
 .contactos {
     padding: 2em;
-    height: 120vh;
+    min-height: 120vh;
     background: linear-gradient(to bottom, #000000, #1a1a1a);
     width: 100%;
     margin: 0 auto;
+    display: flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -562,7 +576,7 @@ form:hover {
 
 .input input:focus,
 .input textarea:focus {
-    outline: outset;
+    outline: none;
 }
 
 
@@ -635,7 +649,6 @@ button:hover {
     padding-bottom: 10px;
     font-weight: bold;
     font-family: var(--fuente-primaria);
-    font-size: 25px;
 }
 
 
@@ -649,6 +662,7 @@ button:hover {
     color: white;
     text-decoration: none;
     transition: all 0.5s ease;
+    text-shadow: 1px 3px 17px rgba(0,0,0,0.6);
 }
 
 
@@ -695,17 +709,6 @@ button:hover {
 }
 
 
-#whatsapp-icon .whatsapp i {
-    color: white;
-}
-
-
-#whatsapp-icon a {
-        text-decoration: none;
-}
-
-
-
 #whatsapp-icon a {
         text-decoration: none;
 }
@@ -747,15 +750,17 @@ button:hover {
 
 /* mediaquery responsive*/
 
+
+
+/* navbar */
+
 .hamburguesa {
     display: none; 
 }
 
-/* navbar */
 
+/* hamburguesa */
 @media only screen and (max-width: 480px) {
-
-
     .navbar-menu {
         display: none;
     }
@@ -767,22 +772,21 @@ button:hover {
         font-size: 40px; 
         cursor: pointer; 
     }
-    .show-menu {
-        display: block;
-    }
-
-    .navbar {
-        padding-left: 50px;
-        padding-right: 50px; 
-    }
-
 }
+
 
 
 
 /* Banner */
 
 @media only screen and (max-width: 480px) {
+
+    .banner {
+        background-size: cover;
+        background-position: center; 
+        background-color: #f0f0f0; 
+    }
+
     .contenedor {
         flex-direction: column; 
         align-items: center; 
@@ -809,6 +813,15 @@ button:hover {
     .grid__categorias {
         grid-template-columns: 1fr; 
         gap: 1em; 
+    }
+
+    .linea-categorias, .linea-productos, .linea-contactos {
+        background-color: white;
+        height: 2px;
+        max-width: 70%;
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
 
@@ -839,5 +852,21 @@ button:hover {
 @media only screen and (max-width: 480px) {
     .info__contacto {
         text-align: center; 
+    }
+
+
+    button {
+        width: 50%; 
+    }
+
+    button i {
+        font-size: 20px; 
+    }
+}
+
+
+@media only screen and (max-width: 880px) {
+    .info__contacto {
+        text-align: center;
     }
 }
